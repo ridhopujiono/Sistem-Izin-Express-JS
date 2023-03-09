@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/date/flatpickr.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/izitoast/css/izitoast.min.css" />
+
+    <title>Sistem Izin</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-title">Sistem Izin</div>
+    </header>
+    <div class="container container-fluid" style="margin-top: -50px">
+      <div class="row justify-content-center">
+        <div class="col">
+          <div id="date"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <input type="text" class="d-none" name="date" />
+          <div class="form-group">
+            <select name="userId" id="userId" class="form-select">
+              <option value="">Nama Lengkap</option>
+              <% data.forEach(function (user) { %>
+              <option value="<%= user.id %>"><%= user.name %></option>
+              <% }); %>
+            </select>
+          </div>
+          <div class="form-group mt-3">
+            <textarea
+              name="reason"
+              id="reason"
+              cols="30"
+              rows="2"
+              class="form-control"
+              placeholder="Alasan"
+            ></textarea>
+          </div>
+          <div class="form-group mt-3">
+            <button
+              type="button"
+              onclick="sendPermit()"
+              class="btn"
+              id="btn-main"
+            >
+              Kirim Izin!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/date/flatpickr.js"></script>
+    <script src="/js/date.js"></script>
+    <script src="/js/send.js"></script>
+    <script src="/izitoast/js/izitoast.min.js"></script>
+  </body>
+</html>
