@@ -3,7 +3,7 @@
   padding: 0;
 }
 :root {
-  --main-color: #37c890;
+  --main-color: #609966;
 }
 .flatpickr-wrapper {
   position: relative;
@@ -16,6 +16,9 @@
 }
 .flatpickr-calendar.inline {
   border-radius: 20px;
+}
+.shake {
+  animation: tilt-shaking 0.25s 4;
 }
 header {
   height: 120px;
@@ -34,4 +37,22 @@ header {
   background: var(--main-color);
   font-size: 15px;
   color: #fff;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

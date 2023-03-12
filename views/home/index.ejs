@@ -26,12 +26,19 @@
     <div class="container mt-4">
       <div class="row justify-content-center">
         <div class="col-10">
+          <div
+            class="alert alert-warning date-warning"
+            style="background: #edf1d6; color: #6c6e5f; border-color: #d2d5c0"
+          >
+            Pilih tanggal izin anda
+          </div>
+
           <input type="text" class="d-none" name="date" />
           <div class="form-group">
             <select name="userId" id="userId" class="form-select">
               <option value="">Nama Lengkap</option>
               <% data.forEach(function (user) { %>
-              <option value="<%= user.id %>"><%= user.name %></option>
+              <option value="<%= user.name %>"><%= user.name %></option>
               <% }); %>
             </select>
           </div>
