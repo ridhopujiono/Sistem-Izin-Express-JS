@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sistem Izin</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Sistem Izin" />
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- FontAwesome JS-->
+    <script defer src="theme/assets/plugins/fontawesome/js/all.min.js"></script>
+
+    <!-- App CSS -->
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="theme/assets/css/portal.css"
+    />
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="theme/assets/css/modals.css"
+    />
+    <link rel="stylesheet" href="/date/flatpickr.css" />
+  </head>
+
+  <body class="app">
+    <header class="app-header fixed-top">
+      <div class="app-header-inner">
+        <div class="container-fluid py-2">
+          <div class="app-header-content">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto">
+                <a
+                  id="sidepanel-toggler"
+                  class="sidepanel-toggler d-inline-block d-xl-none"
+                  href="#"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    role="img"
+                  >
+                    <title>Menu</title>
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M4 7h22M4 15h22M4 23h22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <!--//app-search-box-->
+
+              <div class="app-utilities col-auto">
+                :)
+                <!--//app-user-dropdown-->
+              </div>
+              <!--//app-utilities-->
+            </div>
+            <!--//row-->
+          </div>
+          <!--//app-header-content-->
+        </div>
+        <!--//container-fluid-->
+      </div>
+      <!--//app-header-inner-->
+      <div id="app-sidepanel" class="app-sidepanel">
+        <div id="sidepanel-drop" class="sidepanel-drop"></div>
+        <div class="sidepanel-inner d-flex flex-column">
+          <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none"
+            >&times;</a
+          >
+          <div class="app-branding">
+            <a class="app-logo" href="index.html"
+              ><img
+                class="logo-icon me-2"
+                src="theme/assets/images/app-logo.svg"
+                alt="logo"
+              /><span class="logo-text">Sistem Izin</span></a
+            >
+          </div>
+          <!--//app-branding-->
+
+          <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+            <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+              <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link active" href="index.html">
+                  <span class="nav-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-ui-checks"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708l-2 2zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="nav-link-text">Beranda</span> </a
+                ><!--//nav-link-->
+              </li>
+              <!--//nav-item-->
+            </ul>
+            <!--//app-menu-->
+          </nav>
+          <!--//app-nav-->
+          <!--//app-sidepanel-footer-->
+        </div>
+        <!--//sidepanel-inner-->
+      </div>
+      <!--//app-sidepanel-->
+    </header>
+
+    <div class="app-wrapper">
+      <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container container-fluid">
+          <h1 class="app-page-title">Beranda</h1>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="app-card app-card-stats-table h-100 shadow-sm">
+                <div class="app-card-header p-3">
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                      <h4 class="app-card-title">Siswa Izin</h4>
+                    </div>
+                    <!--//col-->
+                    <div class="col-auto">
+                      <div class="card-header-action">
+                        <a href="#"></a>
+                      </div>
+                      <!--//card-header-actions-->
+                    </div>
+                    <!--//col-->
+                  </div>
+                  <!--//row-->
+                </div>
+                <!--//app-card-header-->
+                <div class="app-card-body p-3 p-lg-4">
+                  <div class="table-responsive">
+                    <table class="table table-borderless mb-0">
+                      <thead class="table-success">
+                        <tr>
+                          <th class="meta text-black">Nama Lengkap</th>
+                          <th class="meta stat-cell text-black">Alasan</th>
+                          <th class="meta stat-cell text-black">Tanggal</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody-id">
+                        <% nowData.forEach((now) => { %>
+                        <tr>
+                          <td><%= now.name %></td>
+                          <td class="stat-cell"><%= now.reason %></td>
+                          <td class="stat-cell"><%= now.created_at %></td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--//table-responsive-->
+                </div>
+                <!--//app-card-body-->
+              </div>
+            </div>
+            <div class="col-md">
+              <div id="date"></div>
+            </div>
+          </div>
+        </div>
+        <!--//container-fluid-->
+      </div>
+      <!--//app-content-->
+
+      <footer class="app-auth-footer">
+        <div class="container text-center py-3">
+          <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+          <small class="copyright"
+            >Designed with <span class="sr-only">love</span
+            ><i class="fas fa-heart" style="color: #fb866a"></i> by
+            <a
+              class="app-link"
+              href="http://themes.3rdwavemedia.com"
+              target="_blank"
+              >Xiaoying Riley</a
+            >
+            for developers</small
+          >
+        </div>
+      </footer>
+      <!--//app-footer-->
+    </div>
+
+    <!-- Javascript -->
+    <script src="theme/assets/plugins/popper.min.js"></script>
+    <script src="theme/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Charts JS -->
+    <script src="theme/assets/plugins/chart.js/chart.min.js"></script>
+    <script src="theme/assets/js/index-charts.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="theme/assets/js/app.js"></script>
+    <script src="/date/flatpickr.js"></script>
+    <script src="/admin/js/date.js"></script>
+  </body>
+</html>
