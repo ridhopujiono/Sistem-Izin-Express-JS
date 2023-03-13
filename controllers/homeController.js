@@ -5,7 +5,7 @@ const db = fire.firestore();
 exports.index = async function (req, res, next) {
   try {
     const data = user.data.name;
-    res.render("home", {
+    res.render("home/index", {
       data: data,
     });
   } catch (error) {
