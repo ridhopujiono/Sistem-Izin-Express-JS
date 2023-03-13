@@ -1,8 +1,7 @@
-const express = require('express');
-const router = express.Router();
 const fire = require('./fire')
 const user = require('../config/user.js');
 const db = fire.firestore();
+
 
 exports.index = async function (req, res, next) {
     try {
