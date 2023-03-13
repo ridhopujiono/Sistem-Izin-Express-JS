@@ -18,7 +18,7 @@ app.use(
 );
 app.use("/izitoast", express.static(__dirname + "/node_modules/izitoast/dist"));
 
-const routes = require("../routes/index.js");
+const routes = require("./routes/index.js");
 app.use(routes);
 
 app.listen(3000, () => {
