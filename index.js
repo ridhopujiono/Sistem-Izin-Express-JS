@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
@@ -10,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
-app.use("views", express.static(__dirname + "views"));
+app.set("views", path.join(__dirname, "views"));
 app.use(express.static(__dirname + "/public"));
 app.use("/date", express.static(__dirname + "/node_modules/flatpickr/dist"));
 app.use(
