@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set("views", express.static(__dirname + "views"));
 app.set("view engine", "ejs");
+app.use("views", express.static(__dirname + "views"));
 app.use(express.static(__dirname + "/public"));
 app.use("/date", express.static(__dirname + "/node_modules/flatpickr/dist"));
 app.use(
